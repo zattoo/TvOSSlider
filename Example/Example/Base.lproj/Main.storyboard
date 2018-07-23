@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fdU-Ox-cCb">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aan-GP-S7F">
+            <objects>
+                <viewController id="fdU-Ox-cCb" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y4C-Nw-ILw"/>
+                        <viewControllerLayoutGuide type="bottom" id="F8N-hj-bXa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ml6-0W-rtx">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2I-iv-n0p">
+                                <rect key="frame" x="863" y="342" width="195" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pni-84-fmt" customClass="TvOSSlider" customModule="TvOSSlider">
+                                <rect key="frame" x="366" y="514" width="1188" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg2-Kc-Riq">
+                                <rect key="frame" x="948" y="625" width="24" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UL7-hH-mws" firstAttribute="bottom" secondItem="Pni-84-fmt" secondAttribute="bottom" constant="453" id="3wu-uw-ldp"/>
+                            <constraint firstItem="Dg2-Kc-Riq" firstAttribute="top" secondItem="Pni-84-fmt" secondAttribute="bottom" constant="58" id="T48-Ku-nCN"/>
+                            <constraint firstItem="Pni-84-fmt" firstAttribute="leading" secondItem="UL7-hH-mws" secondAttribute="leading" constant="276" id="bNW-NZ-Dfe"/>
+                            <constraint firstItem="UL7-hH-mws" firstAttribute="trailing" secondItem="Pni-84-fmt" secondAttribute="trailing" constant="276" id="fRq-Zz-4pV"/>
+                            <constraint firstItem="Dg2-Kc-Riq" firstAttribute="centerX" secondItem="UL7-hH-mws" secondAttribute="centerX" id="i4r-xD-0Wb"/>
+                            <constraint firstItem="Pni-84-fmt" firstAttribute="top" secondItem="UL7-hH-mws" secondAttribute="top" constant="454" id="u5z-nu-0Bd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UL7-hH-mws"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvOSSlider" destination="Pni-84-fmt" id="RXr-Co-ebv"/>
+                        <outlet property="valueLabel" destination="Dg2-Kc-Riq" id="qBY-Aw-go8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ni-Pv-0He" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="1335"/>
+        </scene>
+    </scenes>
+</document>

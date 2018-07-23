@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/dcordero/Sources/TvOSSlider/TvOSSlider/TvOSSlider.swift",
+      "line": 263,
+      "symbol": "TvOSSlider.storedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dcordero/Sources/TvOSSlider/TvOSSlider/TvOSSlider.swift",
+      "line": 511,
+      "symbol": "TvOSSlider.pressesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/dcordero/Sources/TvOSSlider"
+}
