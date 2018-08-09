@@ -252,7 +252,7 @@ public final class TvOSSlider: UIControl {
     /// :nodoc:
     public override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         coordinator.addCoordinatedAnimations({
-            self.isFocused ? self.applyFocusedStyle() : self.applyUnfocusedStyle()
+            self.updateStateDependantViews()
         }, completion: nil)
     }
     
@@ -301,6 +301,7 @@ public final class TvOSSlider: UIControl {
         setUpGestures()
         
         NotificationCenter.default.addObserver(self, selector: #selector(controllerConnected(note:)), name: .GCControllerDidConnect, object: nil)
+        updateStateDependantViews()
     }
     
     private func setUpThumbView() {
@@ -390,26 +391,6 @@ public final class TvOSSlider: UIControl {
         else {
             transform = CGAffineTransform.identity
         }
-    }
-    
-    private func applyFocusedStyle() {
-        UIView.animate(
-            withDuration: animationDuration,
-            animations: {
-                [weak self] in
-                self?.updateStateDependantViews()
-            },
-            completion: nil)
-    }
-    
-    private func applyUnfocusedStyle() {
-        UIView.animate(
-            withDuration: animationDuration,
-            animations: {
-                [weak self] in
-                self?.updateStateDependantViews()
-            },
-            completion: nil)
     }
     
     @objc private func controllerConnected(note: NSNotification) {
