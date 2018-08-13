@@ -20,9 +20,6 @@ whitelist_rules:
   - trailing_semicolon
   - void_return
 
-excluded:
-  - TvOSPinKeyboardExample/Pods
-
 colon:
   apply_to_dictionaries: false
 
