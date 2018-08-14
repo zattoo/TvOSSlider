@@ -402,13 +402,7 @@ public final class TvOSSlider: UIControl {
         micro.dpad.valueChangedHandler = {
             [weak self] (pad, x, y) in
             
-            if y > threshold {
-                self?.dPadState = .up
-            }
-            else if y < -threshold {
-                self?.dPadState = .down
-            }
-            else if x < -threshold {
+            if x < -threshold {
                 self?.dPadState = .left
             }
             else if x > threshold {
@@ -463,16 +457,16 @@ public final class TvOSSlider: UIControl {
             if isContinuous {
                 sendActions(for: .valueChanged)
             }
-        case .ended, .cancelled: ()
-        thumbViewCenterXConstraintConstant = Float(thumbViewCenterXConstraint.constant)
-        
-        if abs(velocity) > fineTunningVelocityThreshold {
-            let direction: Float = velocity > 0 ? 1 : -1
-            deceleratingVelocity = abs(velocity) > decelerationMaxVelocity ? decelerationMaxVelocity * direction : velocity
-            deceleratingTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(handleDeceleratingTimer(timer:)), userInfo: nil, repeats: true)
-        }
-        else {
-            stopDeceleratingTimer()
+        case .ended, .cancelled:
+            thumbViewCenterXConstraintConstant = Float(thumbViewCenterXConstraint.constant)
+            
+            if abs(velocity) > fineTunningVelocityThreshold {
+                let direction: Float = velocity > 0 ? 1 : -1
+                deceleratingVelocity = abs(velocity) > decelerationMaxVelocity ? decelerationMaxVelocity * direction : velocity
+                deceleratingTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(handleDeceleratingTimer(timer:)), userInfo: nil, repeats: true)
+            }
+            else {
+                stopDeceleratingTimer()
             }
         default:
             break
