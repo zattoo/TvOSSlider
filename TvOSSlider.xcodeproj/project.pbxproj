@@ -10,7 +10,19 @@
 		FF2D4C3C210606D3002A8032 /* TvOSSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2D4C3A210606D3002A8032 /* TvOSSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2D4C68210607AB002A8032 /* TvOSSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2D4C67210607AB002A8032 /* TvOSSlider.swift */; };
 		FF2D4C6A210607D8002A8032 /* DPadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2D4C69210607D8002A8032 /* DPadState.swift */; };
+		FF47DDEB2123F06300ABA204 /* TvOSSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47DDEA2123F06300ABA204 /* TvOSSliderTests.swift */; };
+		FF47DDED2123F06300ABA204 /* TvOSSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2D4C37210606D3002A8032 /* TvOSSlider.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF47DDEE2123F06300ABA204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF2D4C2E210606D3002A8032 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF2D4C36210606D3002A8032;
+			remoteInfo = TvOSSlider;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FF2D4C37210606D3002A8032 /* TvOSSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvOSSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +30,9 @@
 		FF2D4C3B210606D3002A8032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF2D4C67210607AB002A8032 /* TvOSSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvOSSlider.swift; sourceTree = "<group>"; };
 		FF2D4C69210607D8002A8032 /* DPadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadState.swift; sourceTree = "<group>"; };
+		FF47DDE82123F06300ABA204 /* TvOSSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvOSSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF47DDEA2123F06300ABA204 /* TvOSSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvOSSliderTests.swift; sourceTree = "<group>"; };
+		FF47DDEC2123F06300ABA204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +43,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF47DDE52123F06300ABA204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF47DDED2123F06300ABA204 /* TvOSSlider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -35,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2D4C39210606D3002A8032 /* TvOSSlider */,
+				FF47DDE92123F06300ABA204 /* TvOSSliderTests */,
 				FF2D4C38210606D3002A8032 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2D4C37210606D3002A8032 /* TvOSSlider.framework */,
+				FF47DDE82123F06300ABA204 /* TvOSSliderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +81,15 @@
 				FF2D4C69210607D8002A8032 /* DPadState.swift */,
 			);
 			path = TvOSSlider;
+			sourceTree = "<group>";
+		};
+		FF47DDE92123F06300ABA204 /* TvOSSliderTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF47DDEA2123F06300ABA204 /* TvOSSliderTests.swift */,
+				FF47DDEC2123F06300ABA204 /* Info.plist */,
+			);
+			path = TvOSSliderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,18 +124,40 @@
 			productReference = FF2D4C37210606D3002A8032 /* TvOSSlider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FF47DDE72123F06300ABA204 /* TvOSSliderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF47DDF22123F06300ABA204 /* Build configuration list for PBXNativeTarget "TvOSSliderTests" */;
+			buildPhases = (
+				FF47DDE42123F06300ABA204 /* Sources */,
+				FF47DDE52123F06300ABA204 /* Frameworks */,
+				FF47DDE62123F06300ABA204 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF47DDEF2123F06300ABA204 /* PBXTargetDependency */,
+			);
+			name = TvOSSliderTests;
+			productName = TvOSSliderTests;
+			productReference = FF47DDE82123F06300ABA204 /* TvOSSliderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FF2D4C2E210606D3002A8032 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "David Cordero";
 				TargetAttributes = {
 					FF2D4C36210606D3002A8032 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+					};
+					FF47DDE72123F06300ABA204 = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
@@ -118,12 +174,20 @@
 			projectRoot = "";
 			targets = (
 				FF2D4C36210606D3002A8032 /* TvOSSlider */,
+				FF47DDE72123F06300ABA204 /* TvOSSliderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FF2D4C35210606D3002A8032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF47DDE62123F06300ABA204 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,7 +206,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF47DDE42123F06300ABA204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF47DDEB2123F06300ABA204 /* TvOSSliderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF47DDEF2123F06300ABA204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF2D4C36210606D3002A8032 /* TvOSSlider */;
+			targetProxy = FF47DDEE2123F06300ABA204 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FF2D4C3D210606D3002A8032 /* Debug */ = {
@@ -318,6 +398,43 @@
 			};
 			name = Release;
 		};
+		FF47DDF02123F06300ABA204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TvOSSliderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcodero.TvOSSliderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		FF47DDF12123F06300ABA204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TvOSSliderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcodero.TvOSSliderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,6 +452,15 @@
 			buildConfigurations = (
 				FF2D4C40210606D3002A8032 /* Debug */,
 				FF2D4C41210606D3002A8032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF47DDF22123F06300ABA204 /* Build configuration list for PBXNativeTarget "TvOSSliderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF47DDF02123F06300ABA204 /* Debug */,
+				FF47DDF12123F06300ABA204 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
