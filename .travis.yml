@@ -9,4 +9,4 @@ matrix:
       env: DEVICE="Apple TV"
 script:
   - swiftlint
-  - xcodebuild test -project TvOSSlider.xcodeproj -scheme TvOSSlider -destination 'platform=tvOS Simulator,name=$DEVICE,OS=11.2'
+  - xcodebuild test -project TvOSSlider.xcodeproj -scheme TvOSSlider -destination "platform=tvOS Simulator,name=$DEVICE,OS=11.2"
