@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode8.3
 script:
   - swiftlint
-  - xcodebuild test -project TvOSSlider.xcodeproj -scheme TvOSSlider -destination 'name=Apple TV 4K (at 1080p),OS=latest'
+  - xcodebuild test -project TvOSSlider.xcodeproj -scheme TvOSSlider -destination 'platform=tvOS Simulator,name=$DEVICE,OS=11.2'
