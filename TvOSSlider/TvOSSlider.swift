@@ -127,7 +127,7 @@ public final class TvOSSlider: UIControl {
         - image: The minimum track image to associate with the specified states.
         - state: The control state with which to associate the image.
      */
-    public func setMinimumTrackImage(_ image: UIImage?, for state: UIControlState) {
+    public func setMinimumTrackImage(_ image: UIImage?, for state: UIControl.State) {
         minimumTrackViewImages[state.rawValue] = image
         updateStateDependantViews()
     }
@@ -139,7 +139,7 @@ public final class TvOSSlider: UIControl {
         - image: The maximum track image to associate with the specified states.
         - state: The control state with which to associate the image.
      */
-    public func setMaximumTrackImage(_ image: UIImage?, for state: UIControlState) {
+    public func setMaximumTrackImage(_ image: UIImage?, for state: UIControl.State) {
         maximumTrackViewImages[state.rawValue] = image
         updateStateDependantViews()
     }
@@ -151,7 +151,7 @@ public final class TvOSSlider: UIControl {
         - image: The thumb image to associate with the specified states.
         - state: The control state with which to associate the image.
      */
-    public func setThumbImage(_ image: UIImage?, for state: UIControlState) {
+    public func setThumbImage(_ image: UIImage?, for state: UIControl.State) {
         thumbViewImages[state.rawValue] = image
         updateStateDependantViews()
     }
@@ -179,7 +179,7 @@ public final class TvOSSlider: UIControl {
      
     - Returns: The minimum track image associated with the specified state, or nil if no image has been set. This method might also return nil if you specify multiple control states in the state parameter. For a description of track images, see Customizing the Slider’s Appearance.
      */
-    public func minimumTrackImage(for state: UIControlState) -> UIImage? {
+    public func minimumTrackImage(for state: UIControl.State) -> UIImage? {
         return minimumTrackViewImages[state.rawValue]
     }
     
@@ -191,7 +191,7 @@ public final class TvOSSlider: UIControl {
      
      - Returns: The maximum track image associated with the specified state, or nil if an appropriate image could not be retrieved. This method might return nil if you specify multiple control states in the state parameter. For a description of track images, see Customizing the Slider’s Appearance.
      */
-    public func maximumTrackImage(for state: UIControlState) -> UIImage? {
+    public func maximumTrackImage(for state: UIControl.State) -> UIImage? {
         return maximumTrackViewImages[state.rawValue]
     }
     
@@ -203,7 +203,7 @@ public final class TvOSSlider: UIControl {
      
      - Returns: The thumb image associated with the specified state, or nil if an appropriate image could not be retrieved. This method might return nil if you specify multiple control states in the state parameter. For a description of track and thumb images, see Customizing the Slider’s Appearance.
      */
-    public func thumbImage(for state: UIControlState) -> UIImage? {
+    public func thumbImage(for state: UIControl.State) -> UIImage? {
         return thumbViewImages[state.rawValue]
     }
     
@@ -370,20 +370,20 @@ public final class TvOSSlider: UIControl {
         addGestureRecognizer(panGestureRecognizer)
         
         leftTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftTapWasTriggered))
-        leftTapGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.leftArrow.rawValue)]
-        leftTapGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouchType.indirect.rawValue)]
+        leftTapGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.leftArrow.rawValue)]
+        leftTapGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
         addGestureRecognizer(leftTapGestureRecognizer)
         
         rightTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(rightTapWasTriggered))
-        rightTapGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.rightArrow.rawValue)]
-        rightTapGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouchType.indirect.rawValue)]
+        rightTapGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.rightArrow.rawValue)]
+        rightTapGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
         addGestureRecognizer(rightTapGestureRecognizer)
     }
     
     private func updateStateDependantViews() {
-        minimumTrackView.image = minimumTrackViewImages[state.rawValue] ?? minimumTrackViewImages[UIControlState.normal.rawValue]
-        maximumTrackView.image = maximumTrackViewImages[state.rawValue] ?? maximumTrackViewImages[UIControlState.normal.rawValue]
-        thumbView.image = thumbViewImages[state.rawValue] ?? thumbViewImages[UIControlState.normal.rawValue]
+        minimumTrackView.image = minimumTrackViewImages[state.rawValue] ?? minimumTrackViewImages[UIControl.State.normal.rawValue]
+        maximumTrackView.image = maximumTrackViewImages[state.rawValue] ?? maximumTrackViewImages[UIControl.State.normal.rawValue]
+        thumbView.image = thumbViewImages[state.rawValue] ?? thumbViewImages[UIControl.State.normal.rawValue]
         
         if isFocused {
             transform = CGAffineTransform(scaleX: focusScaleFactor, y: focusScaleFactor)

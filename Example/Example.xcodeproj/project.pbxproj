@@ -12,7 +12,6 @@
 		FF2D4C542106071A002A8032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2D4C522106071A002A8032 /* Main.storyboard */; };
 		FF2D4C562106071C002A8032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2D4C552106071C002A8032 /* Assets.xcassets */; };
 		FF2D4C6321060775002A8032 /* TvOSSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2D4C6221060775002A8032 /* TvOSSlider.framework */; };
-		FF2D4C642106078D002A8032 /* TvOSSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2D4C6221060775002A8032 /* TvOSSlider.framework */; };
 		FF2D4C652106078D002A8032 /* TvOSSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF2D4C6221060775002A8032 /* TvOSSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2D4C6321060775002A8032 /* TvOSSlider.framework in Frameworks */,
-				FF2D4C642106078D002A8032 /* TvOSSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +234,7 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
@@ -289,6 +288,7 @@
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -308,7 +308,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dcodero.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
@@ -328,7 +327,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dcodero.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};

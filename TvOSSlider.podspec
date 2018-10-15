@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
   s.summary = 'TvOSSlider is an implementation of UISlider for tvOS.'
   s.homepage = 'https://github.com/zattoo/TvOSSlider'
   s.source = { :git => 'https://github.com/zattoo/TvOSSlider.git', :tag => s.version }
+  s.swift_version = '4.2'
   s.tvos.deployment_target = '11.0'
   s.source_files = 'TvOSSlider/**/*.swift'
 end
