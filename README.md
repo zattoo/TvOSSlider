@@ -1,4 +1,7 @@
 # TvOSSlider
+[![Build Status](https://travis-ci.org/zattoo/TvOSSlider.svg?branch=master)](https://travis-ci.org/zattoo/TvOSSlider)
+![License MIT](https://img.shields.io/badge/license-MIT-green.svg)
+![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
 
 TvOSSlider is an implementation of [UISlider](https://developer.apple.com/documentation/uikit/uislider) for tvOS.
 
