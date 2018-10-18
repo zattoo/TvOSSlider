@@ -77,7 +77,7 @@ $ brew install carthage
 To integrate TvOSSlider into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "zattoo/TvOSSlider" ~> 1.0.0
+github "zattoo/TvOSSlider" ~> 1.1.0
 ```
 
 Run carthage update to build the framework and drag the built TvOSSlider.framework into your Xcode project.

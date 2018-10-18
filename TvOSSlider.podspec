@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'TvOSSlider'
   s.author = 'Zattoo'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.license = 'MIT'
   s.summary = 'TvOSSlider is an implementation of UISlider for tvOS.'
   s.homepage = 'https://github.com/zattoo/TvOSSlider'
