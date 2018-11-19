@@ -439,10 +439,22 @@ public final class TvOSSlider: UIControl {
         sendActions(for: .valueChanged)
     }
     
+    private func isVerticalGesture(_ recognizer: UIPanGestureRecognizer) -> Bool {
+        let translation = recognizer.translation(in: self)
+        if abs(translation.y) > abs(translation.x) {
+            return true
+        }
+        return false
+    }
+    
     // MARK: - Actions
     
     @objc
     private func panGestureWasTriggered(panGestureRecognizer: UIPanGestureRecognizer) {
+        if self.isVerticalGesture(panGestureRecognizer) {
+            return
+        }
+        
         let translation = Float(panGestureRecognizer.translation(in: self).x)
         let velocity = Float(panGestureRecognizer.velocity(in: self).x)
         
