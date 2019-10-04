@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 ## Requirements
 
 - tvOS 11.0+
-- Xcode 9.4
+- Xcode 11
 
 ## Installation
 

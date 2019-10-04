@@ -2,11 +2,11 @@ language: objective-c
 matrix:
   include:
     - os: osx
-      osx_image: xcode10
+      osx_image: xcode11
       env: DEVICE="Apple TV 4K"
     - os: osx
-      osx_image: xcode10
+      osx_image: xcode11
       env: DEVICE="Apple TV"
 script:
   - swiftlint
-  - xcodebuild test -project TvOSSlider.xcodeproj -scheme TvOSSlider -destination "platform=tvOS Simulator,name=$DEVICE,OS=11.2"
+  - xcodebuild test -project TvOSSlider.xcodeproj -scheme TvOSSlider -destination "platform=tvOS Simulator,name=$DEVICE,OS=12.2"
