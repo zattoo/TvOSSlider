@@ -1,7 +1,7 @@
 # TvOSSlider
 [![Build Status](https://travis-ci.org/zattoo/TvOSSlider.svg?branch=master)](https://travis-ci.org/zattoo/TvOSSlider)
 ![License MIT](https://img.shields.io/badge/license-MIT-green.svg)
-![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
+![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
 
 TvOSSlider is an implementation of [UISlider](https://developer.apple.com/documentation/uikit/uislider) for tvOS.
 
@@ -80,7 +80,7 @@ $ brew install carthage
 To integrate TvOSSlider into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "zattoo/TvOSSlider" ~> 1.1.0
+github "zattoo/TvOSSlider" ~> 1.2.0
 ```
 
 Run carthage update to build the framework and drag the built TvOSSlider.framework into your Xcode project.
