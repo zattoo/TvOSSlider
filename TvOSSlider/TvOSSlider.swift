@@ -472,14 +472,13 @@ public final class TvOSSlider: UIControl {
         case .ended, .cancelled:
             thumbViewCenterXConstraintConstant = Float(thumbViewCenterXConstraint.constant)
             
-            if abs(velocity) > fineTunningVelocityThreshold {
-                let direction: Float = velocity > 0 ? 1 : -1
-                deceleratingVelocity = abs(velocity) > decelerationMaxVelocity ? decelerationMaxVelocity * direction : velocity
-                deceleratingTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(handleDeceleratingTimer(timer:)), userInfo: nil, repeats: true)
-            }
-            else {
-                stopDeceleratingTimer()
-            }
+            stopDeceleratingTimer()
+            guard deceleratingTimer == nil else { return }
+
+            let direction: Float = velocity > 0 ? 1 : -1
+            deceleratingVelocity = abs(velocity) > decelerationMaxVelocity ? decelerationMaxVelocity * direction : velocity
+            deceleratingTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(handleDeceleratingTimer(timer:)), userInfo: nil, repeats: true)
+            
         default:
             break
         }
